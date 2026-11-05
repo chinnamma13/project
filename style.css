@@ -1,0 +1,240 @@
+*
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Header */
+header {
+    background-color: #253b70;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #555;
+}
+
+.card h2 {
+    font-size: 30px;
+    color: #253b70;
+    margin-top: 12px;
+}
+
+/* Form and Task Sections */
+.task-form,
+.task-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-form h2,
+.task-section h2 {
+    color: #253b70;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #253b70;
+    color: white;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#submitBtn {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Filter Buttons */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.filter-btn {
+    background-color: #e5eaf4;
+    color: #253b70;
+}
+
+.filter-btn.active {
+    background-color: #253b70;
+    color: white;
+}
+
+/* Individual Task */
+.task-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #999;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.task-card.high {
+    border-left-color: #e53935;
+}
+
+.task-card.medium {
+    border-left-color: #f9a825;
+}
+
+.task-card.low {
+    border-left-color: #43a047;
+}
+
+.task-card.completed {
+    background-color: #f1f5f2;
+    opacity: 0.7;
+}
+
+.task-card.completed h3 {
+    text-decoration: line-through;
+}
+
+.task-card h3 {
+    margin-bottom: 10px;
+    color: #253b70;
+}
+
+.task-card p {
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.complete-btn {
+    background-color: #388e3c;
+}
+
+.edit-btn {
+    background-color: #1976d2;
+}
+
+.delete-btn {
+    background-color: #d32f2f;
+}
+
+/* Empty Message */
+.empty-message {
+    text-align: center;
+    color: #777;
+    padding: 25px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .task-form,
+    .task-section {
+        padding: 18px;
+    }
+}

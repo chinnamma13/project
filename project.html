@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beginner Blueprint - Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Website Header -->
+        <header>
+            <h1>Beginner Blueprint</h1>
+            <p>Organize your tasks and manage your time</p>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending Tasks</h3>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Completed Tasks</h3>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+        </section>
+
+        <!-- Add Task Section -->
+        <section class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <label for="taskName">Task Name</label>
+                <input type="text" id="taskName"
+                    placeholder="Enter your task" required>
+
+                <label for="description">Description</label>
+                <textarea id="description"
+                    placeholder="Enter task description"></textarea>
+
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <label for="deadline">Deadline</label>
+                <input type="date" id="deadline" required>
+
+                <button type="submit" id="submitBtn">
+                    Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Task List Section -->
+        <section class="task-section">
+
+            <h2>My Tasks</h2>
+
+            <input type="text" id="searchInput"
+                placeholder="Search your tasks...">
+
+            <div class="filters">
+
+                <button class="filter-btn active" data-filter="All">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="Pending">
+                    Pending
+                </button>
+
+                <button class="filter-btn" data-filter="Completed">
+                    Completed
+                </button>
+
+                <button class="filter-btn" data-filter="High">
+                    High Priority
+                </button>
+
+            </div>
+
+            <div id="taskList">
+
+                <!-- Tasks will appear here -->
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Beginner Blueprint | Task Prioritization Manager</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
